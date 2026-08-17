@@ -6,7 +6,7 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-const PORT = process.env.PORT || 3000;git
+const PORT = 3000;
 const JWT_SECRET = process.env.JWT_SECRET || "change-this-secret-in-production";
 
 app.use(express.json());
@@ -266,6 +266,6 @@ app.get("/admin",(req,res)=>res.sendFile(path.join(__dirname,"public","admin.htm
 app.get("/",(req,res)=>res.sendFile(path.join(__dirname,"public","index.html")));
 app.use((req,res)=>res.status(404).json({error:"Route not found."}));
 
-app.listen(PORT, "0.0.0.0", () => {
-    console.log(`EV ChargeHub running on port ${PORT}`);
+app.listen(PORT, () => {
+    console.log(`EV ChargeHub running at http://localhost:${PORT}`);
 });
