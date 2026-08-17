@@ -1,0 +1,13 @@
+{
+  "name":"ev-chargehub",
+  "version":"2.0.0",
+  "description":"Professional EV charging station finder and booking platform",
+  "main":"server.js",
+  "scripts":{"start":"node server.js","dev":"node server.js"},
+  "dependencies":{
+    "bcryptjs":"^3.0.2",
+    "express":"^5.1.0",
+    "jsonwebtoken":"^9.0.2",
+    "sqlite3":"^6.0.1"
+  }
+}
